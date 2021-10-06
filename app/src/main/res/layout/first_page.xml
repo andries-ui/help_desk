@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".FirstPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:id="@+id/welcome"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_centerHorizontal="true"/>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/welcome"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/support"
+        android:scaleType="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/tech_support"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/support"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:background="@color/grey_100"
+        android:layout_alignParentBottom="true">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_style"
+        android:text="Sign in"
+        android:id="@+id/signin_dialog"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Activate Account"
+        android:background="@drawable/btn_style"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/signin_dialog"
+        android:id="@+id/signup_dialog"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

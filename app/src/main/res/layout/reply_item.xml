@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reply"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/reply_style"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey_900"
+            android:text="Technician Replies"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_below="@+id/reply"
+            android:id="@+id/images"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:layout_below="@+id/images"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="14dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Unresolved"
+            android:layout_below="@+id/status"
+            android:id="@+id/unresolved"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/red_800"
+            android:background="@drawable/btn_style"
+            android:layout_toLeftOf="@+id/helper1"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/helper1"
+            android:layout_centerInParent="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Resolved"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@+id/status"
+            android:id="@+id/resolved"
+            android:textColor="@color/green_800"
+            android:background="@drawable/btn_style"
+            android:layout_toRightOf="@+id/helper1"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

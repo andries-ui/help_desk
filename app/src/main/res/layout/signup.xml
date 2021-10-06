@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="15dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Hello World!"
+        android:src="@drawable/activate"
+        android:id="@+id/image"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/image"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+               <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/id"
+                    android:background="@drawable/editstyle"
+                    android:hint="Identity number"
+                    app:startIconDrawable="@drawable/id_card"
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:gravity="bottom"
+                        android:digits="0123654789"
+                        android:drawablePadding="5dp"
+                        android:background="@android:color/transparent"
+                        android:maxLength="30"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    app:startIconDrawable="@drawable/ic_baseline_email_24"
+                    android:background="@drawable/editstyle"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/id"
+                    android:hint="User email">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:drawablePadding="5dp"
+                        android:background="@android:color/transparent"
+                        android:maxLength="50"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Verify"
+                    android:id="@+id/verify"
+                    android:background="@drawable/buttonlayoutstyle"
+                    android:layout_below="@+id/email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:id="@+id/create_password"
+                    android:visibility="gone"
+                    app:cardCornerRadius="9dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/message"
+                            style="@style/TextAppearance.MaterialComponents.Headline5"
+                            android:text="Successful! Youo may activate your account."/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:layout_below="@+id/message"
+                    android:background="@drawable/editstyle"
+                    android:layout_marginTop="20dp"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                    android:hint="password"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:drawablePadding="5dp"
+                    android:background="@android:color/transparent"
+                    android:maxLength="50"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/viewhide"
+                    android:layout_below="@+id/password"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-43dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_visibility_24"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password"
+                    android:id="@+id/validatePassword">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Strong password quidence"
+                        style="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/passwordQuidenceHeader"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="* Must contain atleast one Capital leter"
+                        style="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/passwordHasCapital"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="* Must contain atleast one small caps"
+                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textSize="12dp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/passwordHasNoCapital"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="* Must contain atleast one number"
+                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textSize="12dp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/passwordHasNumer"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="* Must contain atleast one character"
+                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:textSize="12dp"
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/passwordHasCharacter"/>
+                        <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="* Must be atleast 8 or more in length"
+                        style="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textSize="12dp"
+                            android:textColor="@color/black"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/passwordHaEightCharacters"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirmPassword"
+                    android:background="@drawable/editstyle"
+                    android:layout_marginTop="5dp"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                    android:layout_below="@+id/validatePassword"
+                    android:hint="confirm password"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:drawablePadding="5dp"
+                        android:background="@android:color/transparent"
+                        android:maxLength="50"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/confirmviewhide"
+                    android:layout_below="@+id/confirmPassword"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-43dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_visibility_24"
+                    />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Sign up"
+                    android:id="@+id/sign_up"
+                    android:background="@drawable/buttonlayoutstyle"
+                    android:layout_below="@+id/confirmPassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

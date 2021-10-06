@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingBottom="50dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Hello World!"
+        android:src="@drawable/images"
+        android:id="@+id/image"
+        android:scaleType="fitXY"
+        android:layout_marginTop="95dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/image"
+        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/username"
+        android:background="@drawable/editstyle"
+        android:hint="Username"
+        app:startIconDrawable="@drawable/ic_baseline_perm_identity_24"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:drawablePadding="5dp"
+            android:background="@android:color/transparent"
+            android:maxLength="30"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/password"
+            android:background="@drawable/editstyle"
+            android:hint="Password"
+            android:layout_below="@+id/username"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:drawablePadding="5dp"
+                android:background="@android:color/transparent"
+                android:maxLength="50"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/viewhide"
+            android:layout_below="@+id/password"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-43dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_visibility_24"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset_password"
+            android:textStyle="bold"
+            android:text="Rest Password"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:textColor="@color/blue_500"/>
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign In"
+            android:id="@+id/sign_in"
+            android:background="@drawable/buttonlayoutstyle"
+            android:layout_below="@+id/reset_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:paddingRight="50dp"
+            android:layout_above="@+id/view">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/or"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:layout_centerInParent="true"
+                android:id="@+id/or"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/or"
+                android:layout_alignParentRight="true"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/view">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign Up"
+                android:textColor="@color/blue_600"
+                android:id="@+id/signup"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" if Unregistered."
+                android:layout_toRightOf="@+id/signup"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

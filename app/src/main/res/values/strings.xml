@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Help Desk</string>
+
+    <string name="Grade">Stream</string>
+    <string-array name="deficulties">
+        <item>Printer</item>
+        <item>Windows</item>
+        <item>MacBook</item>
+        <item>Projector</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="department">Select Department</string>
+    <string-array name="department_list">
+        <item>Finance</item>
+        <item>Operation office</item>
+        <item>Administration</item>
+        <item>Economics</item>
+    </string-array>
+</resources>

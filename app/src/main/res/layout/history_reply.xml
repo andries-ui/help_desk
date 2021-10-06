@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edt_history_item"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/query">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:id="@+id/date"
+        android:textSize="16dp"
+        android:text="date"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:id="@+id/description"
+        android:text="description"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/description"
+        android:id="@+id/view"
+        android:background="@color/blue_grey_600"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/feedback"
+        android:layout_below="@+id/view">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/attended"
+        android:layout_toLeftOf="@+id/helper"
+        android:text="attended"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/status"
+        android:paddingRight="10dp"
+        android:layout_toRightOf="@+id/helper"
+        android:text="status"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/statusInducator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/status"
+            android:src="@drawable/ic_baseline_image_24black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/helper"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guide"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:text="Click to resubmit the issue,NB: this works only on unsolved issues"
+        android:layout_below="@+id/feedback"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image"
+        android:padding="5dp"
+        android:layout_below="@+id/query"
+        android:src="@drawable/ic_baseline_image_24black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/image"
+        android:id="@+id/line"
+        android:background="@color/blue_grey_800"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:layout_below="@+id/line"
+        android:text="Technician Replies"
+        style="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/replies"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/header"/>
+
+</RelativeLayout>

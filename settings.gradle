@@ -1,0 +1,2 @@
+rootProject.name = "Tech Master"
+include ':app'
